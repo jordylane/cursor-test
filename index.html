@@ -7,12 +7,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
+    <main id="gate">
+      <p class="eyebrow">Private page</p>
+      <h1>Request access</h1>
+      <p class="lede">Enter your name and email to prepare an access request for Jordan. Your email app will open so you can send it.</p>
+      <form id="access-form">
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required maxlength="80" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required maxlength="120" />
+        </label>
+        <button type="submit" id="submit-request">Request access</button>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="request-note">Jordan can reply to your request by email. This no-setup flow does not automatically unlock the page.</p>
+    </main>
+
+    <main id="site" hidden>
       <p class="eyebrow">A publicly reachable page</p>
       <h1>Hello, world</h1>
-      <p class="lede">
-        If you can open this, the site is live on the internet.
-      </p>
+      <p class="lede">If you can open this, the site is live on the internet.</p>
     </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
